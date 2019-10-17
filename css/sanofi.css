@@ -117,7 +117,7 @@ thead, tfoot, tr:nth-child(even) { background: none; }
 
 /* Add image and change bg color */
 .title-slide {
-  background-image: url(file:///C:/Users/I0415596/Documents/Projects/Training/Meetup/images/sanofi.png);
+  background-image: url(https://raw.githack.com/opoyc/css_repository/master/images/sanofi.png);
   background-position: 95% 72%;
   background-size: 200px;
   background-color: #fff;
