@@ -1,0 +1,491 @@
+/*
+CSS for Statistical Forecasting Department of Sanofi
+Author: Obryan Poyser
+Updated: 19-10-14
+Based on: Middlebury College flavor
+*/
+
+
+/* 
+Graphic standards
+
+Pantone: 2116 C
+CMYK: 79/66/0/0
+RGB: 82/92/163
+Hexa: 525CA3
+
+Pantone: 7744 C
+CMYK: 20/0/100/19
+RGB: 188/188/28
+Hexa: BCBC1C
+
+Pantone: 466 C
+CMYK: 20/32/58/0
+RGB: 202/174/122
+Hexa: CAAE7A
+*/
+
+
+a, a > code {
+  color: #D16C19; /* blue accent 2 */
+  text-decoration: none;
+}
+
+.footnote {
+  position: absolute;
+  bottom: 1em;
+  padding-right: 4em;
+  font-size: 70%;
+}
+
+.inverse {
+  background-color: #525CA3;
+  color: #fff;
+  /*text-shadow: 0 0 20px #333;*/
+}
+
+/* slightly spacing change */
+.inverse h1, .inverse h2, .inverse h3 {
+  color: #f3f3f3;
+  line-height: 1.0em;
+}
+
+/* Two-column layout (slightly wider for aspect ration) */
+.left-column {
+  color: #777;
+  width: 25%;
+  height: 92%;
+  float: left;
+}
+
+.left-column h2:last-of-type, .left-column h3:last-child {
+  color: #000;
+}
+
+/* slightly thiner to suppor aspect ration */
+.right-column {
+  width: 70%;
+  float: right;
+  padding-top: 1em;
+}
+
+.pull-right ~ * {
+  clear: both;
+}
+
+img, video, iframe {
+  max-width: 100%;
+}
+
+blockquote {
+  border-left: solid 5px lightgray;
+  padding-left: 1em;
+}
+
+/* adjust table horizontal spacing */
+th, td {
+    padding:0 15px 0 15px;
+}
+
+/* remove color from tables */
+table {
+  margin: auto;
+  border-top: none;
+  border-bottom: none;
+}
+
+table thead th { border-bottom: none; }
+thead, tfoot, tr:nth-child(even) { background: none; }
+
+/* leave this alone */
+@page { margin: 0; }
+@media print {
+  .remark-slide-scaler {
+    width: 100% !important;
+    height: 100% !important;
+    transform: scale(1) !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+}
+
+/*~~~~~>>~~~~~~~~~*/
+/* MIDD additions */
+/*~~~~~~~>>~~~~~~~*/
+
+/* Title slide */
+
+/* Add image and change bg color */
+.title-slide {
+  background-image: url(file:///C:/Users/I0415596/Documents/Projects/Training/Meetup/images/sanofi.png);
+  background-position: 95% 72%;
+  background-size: 200px;
+  background-color: #fff;
+  padding-left: 100px;  /* delete this for 4:3 aspect ratio */
+}
+
+/* H1 fonts */
+.title-slide h1 {
+  color: #0D395F; /* Middlebury blue */
+  padding-top: 250px;
+  font-weight: normal;
+  font-size: 45px;
+  line-height: 0.05;
+  text-align: left;
+  text-shadow: none;
+  padding-bottom: 200px;
+  margin-bottom: 18px;
+}
+
+/* H2 fonts */
+.title-slide h2 {
+  color: #525CA3; /* Middlebury grey accent 1 */
+  font-size: 35px;
+  text-align: left;
+  text-shadow: none;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+/* H3 fonts */
+.title-slide h3 {
+  font-size: 28px;
+  font-weight: normal;
+  color: #AAA59F; /* Middlebury grey accent 2 */
+  text-align: left;
+  text-shadow: none;
+  padding: 0px;
+  margin: 0px;
+  line-height: 1;
+}
+
+
+
+
+
+
+/* Remove slide count */
+.title-slide .remark-slide-number {
+  text-shadow: none;
+}
+
+/*~~~~~~~~~~~~~~~~~~*/
+/* SECTION DIVIDERS */
+/*~~~~~~~~~~~~~~~~~~*/
+
+/* section divider blue */
+.title-slide-section-blue {
+  background-color: #525CA3;
+  padding-left: 100px;  /* delete this for 4:3 aspect ratio */
+}
+
+/* section divider blue H1 fonts */
+.title-slide-section-blue h1, .title-slide-section-blue h2, .title-slide-section-blue h3, .title-slide-section-blue p {
+  color: #AAA59F;
+}
+
+.title-slide-section-blue p {
+  color: #fff;
+}
+
+/* section divider grey */
+.title-slide-section-grey {
+  background-color: #4C4B4C;
+  padding-left: 100px;  /* delete this for 4:3 aspect ratio */
+}
+
+/* section divider grey H1 fonts */
+.title-slide-section-grey h1, .title-slide-section-grey h2, .title-slide-section-grey h3 {
+  color: #AAA59F;
+}
+
+.title-slide-section-grey p {
+  color: #fff;
+}
+
+/*~~~~~~~~~~~~~~~~~~*/
+/* FINAL SLIDE      */
+/*~~~~~~~~~~~~~~~~~~*/
+
+.title-slide-final {
+  background-color: #AAA59F;
+  color: #fff;
+  padding-left: 100px;
+/*  text-shadow: 0 0 3px #333; */
+  text-align: center;
+}
+
+.title-slide-final h1 {
+  color: #4C4B4C;
+}
+
+.title-slide-final h2 {
+  color: #4C4B4C;
+}
+
+.title-slide-final h3 {
+  color: #0D395F;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~*/
+/* Global adjustments */
+/*~~~~~~~~~~~~~~~~~~~~*/
+
+/* Add padding to all slides for 16:9 aspect ratio */
+.remark-slide-content {
+  padding-top: 10px;
+  padding-left: 30px;  /* delete this for 4:3 aspect ratio */
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+
+/* Color adjustments for text */
+
+/* Make bold syntax compile to midd-blue */
+strong {
+  color: #000000;
+  font-size: 20px;
+}
+
+.RUred {
+  color: #cc0033;
+}
+
+/* Add blue tag */
+.blue {
+  color: #525CA3;
+  font-weight: bold;
+}
+
+/* Add grey tag */
+.grey {
+  color: #4C4B4C;
+}
+
+.lightgrey {
+  color: #AAA59F;
+}
+
+/* Force black */
+.black {
+  color: black;
+  font-weight: bold;
+}
+
+/* Add white tag */
+.white {
+  color: white;
+}
+
+/* Color adjustments to headers */
+h1 {
+  color: #525CA3;
+}
+
+h3 {
+  color: #4C4B4C;
+}
+
+/* Font size tags */
+.big {
+  font-size: 1.5em;
+}
+
+/* midd blockquote */
+midd-blockquote {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 40px;
+  margin-right: 40px;
+  border-left: solid 10px #525CA3;
+  background-color: #AAA59F;
+  padding: 1em;
+  color: #fff;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+/* MODS*/
+
+.remark-slide-content h1 {
+  font-size: 35px;
+  padding-top: 0cm;
+}
+
+.inverse h1 {
+  font-size: 45px;
+}
+
+.remark-slide-content h2 {
+  font-size: 30px;
+}
+
+.remark-slide-content h3 {
+  font-size: 28px;
+}
+
+.remark-slide-content {
+  font-size: 20px;
+}
+
+.remark-slide-content .caption {
+  font-size: 17px;
+}
+
+/* H1 fonts */
+.title-slide h1 {
+  color: #525CA3; /* Middlebury blue */
+  padding-top: 250px;
+  font-weight: normal;
+  font-size: 60px;
+  line-height: 0.05;
+  text-align: left;
+  text-shadow: none;
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+}
+
+/* H2 fonts */
+.title-slide h2 {
+  color: #4C4B4C; /* Middlebury grey accent 1 */
+  font-size: 35px;
+  text-align: left;
+  text-shadow: none;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+/* H3 fonts */
+.title-slide h3 {
+  font-size: 28px;
+  font-weight: normal;
+  color: #AAA59F; /* Middlebury grey accent 2 */
+  text-align: left;
+  text-shadow: none;
+  padding: 0px;
+  margin: 0px;
+  line-height: 1;
+}
+
+.large {
+  font-size: 130%:
+}
+
+.remark-inline-code {
+  color: #000000;
+  background-color: #d6d6d6;
+  border-radius: 5px;
+  padding: 4px;
+}
+
+.pl {
+  float: left;
+  width: 49%;
+  height: 98%;
+  vertical-align: middle;
+}
+
+.pr {
+  float: right;
+  width: 49%;
+  height: 98%;
+  vertical-align: middle;
+}
+
+.hljs-solarized-dark .hljs {
+  color: #ffffff;
+  background: #3c5351;
+}
+
+.hljs-solarized-dark .hljs-comment {
+  color: #42f4d4;
+}
+
+.hljs-solarized-dark .hljs-string {
+  color: #3bfc00;
+}
+
+.hljs-solarized-dark .hljs-keyword {
+  color: #ffffff;
+}
+
+.hljs-solarized-dark .hljs-literal {
+  color: rgb(0, 253, 211);
+}
+
+.hljs-solarized-dark .hljs-number {
+  color: #ff7575;
+}
+
+.remark-code-line-highlighted {
+  background-color: rgba(12, 123, 151, 0.6); !important;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+.speccolor1 {
+    color: lightgray;
+}
+
+.middle {
+    vertical-align: middle;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 15%;
+}
+
+#DataTables_Table_0_wrapper {
+    font-size: 0.8rem;
+}
+
+iframe {
+    position: relative;
+    margin-top: 3%;
+    margin-left: 15%;
+}
+
+.p1 {
+  float: left;
+  width: 32%;
+  height: 98%;
+  vertical-align: middle;
+}
+
+.p2 {
+  float: none;
+  width: 32%;
+  height: 98%;
+  vertical-align: middle;
+}
+
+.p3 {
+  float: left;
+  width: 32%;
+  height: 98%;
+  vertical-align: middle;
+}
+
+/* Progress bar CSS*/
+
+.remark-slide-number {
+  position: inherit;
+}
+
+.remark-slide-number .progress-bar-container {
+  position: absolute;
+  bottom: 0;
+  height: 8px;
+  display: block;
+  left: 0;
+  right: 0;
+}
+
+.remark-slide-number .progress-bar {
+  height: 100%;
+  background-color: #BCBC1C;
+}
+
+.imgmiddle {
+  margin-top: 10%;
+}
